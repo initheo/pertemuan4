@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pertemuan4/home_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -67,12 +66,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
-                          ),
-                        );
+                        Navigator.pop(context);
                       }
                     },
                     child: const Text('SUBMIT'),
